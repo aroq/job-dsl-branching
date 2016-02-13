@@ -10,6 +10,7 @@ Config.instance.addParams(System.properties)
 try {
     WORKSPACE
     config.environment = 'jenkins'
+    config.build = build
 } catch (MissingPropertyException mpe) {
     config.environment = 'local'
 }
