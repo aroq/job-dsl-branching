@@ -27,6 +27,7 @@ try {
 //}
 
 config.rootDir = Common.instance.rootDir()
+println config.environment
 println config.rootDir
 
 def configFile = new File(config.rootDir + '/config/config.groovy')
