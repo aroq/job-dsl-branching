@@ -15,20 +15,10 @@ try {
     config.environment = 'local'
 }
 
-//if (config.environment == 'local') {
-//    config.gitlabAddress = System.getProperty('gitlabAddress')
-//    config.projectID = System.getProperty('projectID')
-//    config.privateToken = System.getProperty('privateToken')
-//}
-//else {
-//    config.gitlabAddress = gitlabAddress
-//    config.projectID = projectID
-//    config.privateToken = privateToken
-//}
-
 config.rootDir = Common.instance.rootDir()
 println config.environment
 println config.rootDir
+println System.properties
 
 def configFile = new File(config.rootDir + '/config/config.groovy')
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(configFile.text))
