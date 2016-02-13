@@ -27,7 +27,6 @@ try {
 
 config.rootDir = Common.instance.rootDir()
 
-// Params from config file.
 def configFile = new File(config.rootDir + '/config/config.groovy')
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(configFile.text))
 

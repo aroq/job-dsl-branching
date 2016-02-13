@@ -4,4 +4,4 @@ out/
 *.iml
 .idea
 .DS_Store
-config
+project.config
