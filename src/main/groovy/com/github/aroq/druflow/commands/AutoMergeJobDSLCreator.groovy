@@ -55,6 +55,9 @@ class AutoMergeJobDSLCreator extends JobDSLCreator {
 
     def perform() {
         def componentConfigFile = loadConfig()
+        if (!componentConfigFile) {
+           fail("Component config file is not found.")
+        }
 
         def slurper = new ConfigSlurper()
 
