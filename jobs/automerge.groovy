@@ -20,6 +20,10 @@ try {
 } catch (MissingPropertyException mpe) {
     config.environment = 'local'
     conf = new File(config.rootDir, configFilePath).text
+
+    config.gitlabAddress = gitlabAddress
+    config.projectID = projectID
+    config.privateToken = privateToken
 }
 
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(conf))
