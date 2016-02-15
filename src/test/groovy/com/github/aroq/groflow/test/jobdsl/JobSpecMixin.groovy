@@ -1,4 +1,4 @@
-package com.dslexample
+package com.github.aroq.groflow.test.jobdsl
 
 import javaposse.jobdsl.dsl.JobManagement
 import javaposse.jobdsl.dsl.JobParent

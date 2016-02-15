@@ -1,4 +1,4 @@
-package com.dslexample
+package com.github.aroq.groflow.test.jobdsl
 
 import groovy.io.FileType
 import javaposse.jobdsl.dsl.DslScriptLoader
