@@ -17,13 +17,13 @@ try {
     BUILD_NUMBER
     config.environment = 'jenkins'
     conf = readFileFromWorkspace(configFilePath)
-} catch (MissingPropertyException mpe) {
-    config.environment = 'local'
-    conf = new File(config.rootDir, configFilePath).text
 
     config.gitlabAddress = gitlabAddress
     config.projectID = projectID
     config.privateToken = privateToken
+} catch (MissingPropertyException mpe) {
+    config.environment = 'local'
+    conf = new File(config.rootDir, configFilePath).text
 }
 
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(conf))
