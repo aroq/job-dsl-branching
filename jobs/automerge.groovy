@@ -1,6 +1,6 @@
-import com.github.aroq.druflow.commands.AutoMergeJobDSLCreator
-import com.github.aroq.groovycommon.Common
-import com.github.aroq.groovycommon.Config
+import com.github.aroq.groflow.jobdsl.git.commands.AutoMergeJobDSLCreator
+import com.github.aroq.groflow.common.Common
+import com.github.aroq.groflow.common.Config
 
 config = Config.instance.config
 

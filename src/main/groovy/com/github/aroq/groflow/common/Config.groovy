@@ -1,4 +1,4 @@
-package com.github.aroq.groovycommon
+package com.github.aroq.groflow.common
 /**
  * Created by alex on 26.06.15.
  */

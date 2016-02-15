@@ -1,7 +1,8 @@
-package com.github.aroq.druflow.commands
+package com.github.aroq.groflow.jobdsl.git.commands
 
-import com.github.aroq.druflow.Branch
-import com.github.aroq.groovycommon.Common
+import com.github.aroq.groflow.common.Common
+import com.github.aroq.groflow.jobdsl.JobDSLCreator
+import com.github.aroq.groflow.jobdsl.git.Branch
 
 class AutoMergeJobDSLCreator extends JobDSLCreator {
 

@@ -7,7 +7,7 @@ contextParams {
 
 commands {
     gitlabBranchesList {
-        className = 'com.github.aroq.druflow.commands.GitLabBranchList'
+        className = 'com.github.aroq.groflow.jobdsl.git.commands.GitLabBranchList'
     }
 }
 

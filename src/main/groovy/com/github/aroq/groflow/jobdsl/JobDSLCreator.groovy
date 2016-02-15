@@ -1,6 +1,6 @@
-package com.github.aroq.druflow.commands
+package com.github.aroq.groflow.jobdsl
 
-import com.github.aroq.groovycommon.commands.Command
+import com.github.aroq.groflow.common.commands.Command
 
 /**
  * Created by Aroq on 10/02/16.

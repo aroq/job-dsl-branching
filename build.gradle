@@ -27,11 +27,6 @@ dependencies {
         exclude module: 'groovy-all'
     }
 
-    // for the RestApiScriptRunner
-    compile('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2') {
-        exclude(module: 'groovy')
-    }
-
     // for the RestApiScriptRunner and XmlOutputRunner
     compile('ant:ant:1.7.0')
 }
@@ -39,18 +34,12 @@ dependencies {
 tasks.getByName('test').inputs.files(sourceSets.jobs.groovy.srcDirs)
 tasks.getByName('test').systemProperties(System.getProperties())
 
-task rest(dependsOn: 'classes', type: JavaExec) {
-    main = 'com.dslexample.rest.RestApiScriptRunner'
-    classpath = sourceSets.main.runtimeClasspath
-    systemProperties System.getProperties()
-}
-
 task debugXml(dependsOn: 'classes', type: JavaExec) {
-    main = 'com.dslexample.debug.XmlOutputRunner'
+    main = 'com.github.aroq.jobdsl.debug.XmlOutputRunner'
     classpath = sourceSets.main.runtimeClasspath
     systemProperties System.getProperties()
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
+    gradleVersion = '2.7'
 }

@@ -1,6 +1,6 @@
-package com.github.aroq.groovycommon
+package com.github.aroq.groflow.common
 
-import com.github.aroq.groovycommon.commands.Command
+import com.github.aroq.groflow.common.commands.Command
 
 /**
  * Created by alex on 28.06.15.

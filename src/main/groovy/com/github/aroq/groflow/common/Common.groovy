@@ -1,4 +1,4 @@
-package com.github.aroq.groovycommon
+package com.github.aroq.groflow.common
 
 import groovy.io.FileType
 import groovy.json.JsonSlurper

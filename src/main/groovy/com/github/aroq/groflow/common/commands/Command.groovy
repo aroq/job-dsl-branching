@@ -2,10 +2,10 @@
  * Created by alex on 02.07.15.
  */
 
-package com.github.aroq.groovycommon.commands
+package com.github.aroq.groflow.common.commands
 
-import com.github.aroq.groovycommon.Base
-import com.github.aroq.groovycommon.PropertiesHandler
+import com.github.aroq.groflow.common.Base
+import com.github.aroq.groflow.common.PropertiesHandler
 
 class Command extends Base {
 
