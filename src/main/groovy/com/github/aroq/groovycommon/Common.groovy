@@ -34,6 +34,7 @@ class Common {
     def rootDir() {
         // TODO: Find more elegant way to handle compiled class execution case.
         if (config.environment == 'jenkins') {
+            return ''
         }
 
         System.getProperty("user.dir")

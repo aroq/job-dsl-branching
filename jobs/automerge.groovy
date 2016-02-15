@@ -8,11 +8,12 @@ Config.instance.addParams(System.properties)
 
 // Determine current environment.
 try {
-    WORKSPACE
+    BUILD_NUMBER
     config.environment = 'jenkins'
-    config.build = build
 } catch (MissingPropertyException mpe) {
     config.environment = 'local'
+    def configFile = new File(config.rootDir + '/config/config.groovy')
+
 }
 
 config.rootDir = Common.instance.rootDir()
@@ -20,7 +21,6 @@ println config.environment
 println config.rootDir
 println System.properties
 
-def configFile = new File(config.rootDir + '/config/config.groovy')
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(configFile.text))
 
 (new AutoMergeJobDSLCreator(componentName: 'automerge', scriptObject: this)).execute()
