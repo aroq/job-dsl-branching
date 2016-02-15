@@ -10,6 +10,7 @@ configFilePath = 'config/config.groovy'
 def conf
 
 config.rootDir = Common.instance.rootDir()
+config.workspace = config.rootDir
 
 // Determine current environment.
 try {
