@@ -1,4 +1,4 @@
-package com.github.aroq.jobdsl.debug
+package com.github.aroq.groflow.jobdsl.debug
 
 import groovy.io.FileType
 import javaposse.jobdsl.dsl.*

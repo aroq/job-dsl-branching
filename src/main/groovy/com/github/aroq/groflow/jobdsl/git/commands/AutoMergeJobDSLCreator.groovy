@@ -2,7 +2,7 @@ package com.github.aroq.groflow.jobdsl.git.commands
 
 import com.github.aroq.groflow.common.Common
 import com.github.aroq.groflow.jobdsl.JobDSLCreator
-import com.github.aroq.groflow.jobdsl.git.Branch
+import com.github.aroq.groflow.Branch
 
 class AutoMergeJobDSLCreator extends JobDSLCreator {
 

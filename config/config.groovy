@@ -7,7 +7,16 @@ contextParams {
 
 commands {
     gitlabBranchesList {
-        className = 'com.github.aroq.groflow.jobdsl.git.commands.GitLabBranchList'
+        className = 'com.github.aroq.groflow.gitlab.GitLabBranchList'
+    }
+    branchList {
+        className = 'com.github.aroq.groflow.gitlab.GitLabBranchList'
+    }
+    projectList {
+        className = 'com.github.aroq.groflow.gitlab.GitLabProjectList'
+    }
+    repoBranchFileList {
+        className = 'com.github.aroq.groflow.gitlab.GitLabFileList'
     }
 }
 

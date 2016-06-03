@@ -1,6 +1,6 @@
-import com.github.aroq.groflow.jobdsl.git.commands.AutoMergeJobDSLCreator
 import com.github.aroq.groflow.common.Common
 import com.github.aroq.groflow.common.Config
+import com.github.aroq.groflow.gitlab.ProcessProjectList
 
 config = Config.instance.config
 
@@ -19,7 +19,6 @@ try {
     conf = readFileFromWorkspace(configFilePath)
 
     config.gitlabAddress = gitlabAddress
-    config.projectID = projectID
     config.privateToken = privateToken
 } catch (MissingPropertyException mpe) {
     config.environment = 'local'
@@ -28,10 +27,7 @@ try {
 
 Config.instance.addParams(ConfigSlurper.newInstance(config.environment).parse(conf))
 
-println config.environment
-println config.rootDir
-println System.properties
+new ProcessProjectList().execute()
 
-
-(new AutoMergeJobDSLCreator(componentName: 'automerge', scriptObject: this)).execute()
+//(new AutoMergeJobDSLCreator(componentName: 'automerge', scriptObject: this)).execute()
 

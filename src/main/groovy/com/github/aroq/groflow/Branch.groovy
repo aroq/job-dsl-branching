@@ -1,4 +1,4 @@
-package com.github.aroq.groflow.jobdsl.git
+package com.github.aroq.groflow
 
 class Branch {
     String name
