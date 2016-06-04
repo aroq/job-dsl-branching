@@ -20,6 +20,7 @@ try {
 
     config.baseFolder = baseFolder
     config.triggersFolder = triggersFolder
+    config.projectsJsonPath = 'docroot/config/projects.json'
 } catch (MissingPropertyException mpe) {
     config.environment = 'local'
     conf = new File(config.rootDir, configFilePath).text
