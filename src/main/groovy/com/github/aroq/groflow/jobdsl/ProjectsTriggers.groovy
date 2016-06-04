@@ -8,11 +8,9 @@ import groovy.json.JsonSlurper
  */
 class ProjectsTriggers extends Command {
 
-    String projectsJsonPath
-
     def perform() {
-        log "Projects list path: ${projectsJsonPath}"
-        JsonSlurper.newInstance().parseText(new File(projectsJsonPath).text)
+        log "Projects list path: ${config.projectsJsonPath}"
+        JsonSlurper.newInstance().parseText(new File(config.projectsJsonPath).text)
     }
 
 }
